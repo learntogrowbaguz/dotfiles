@@ -1,0 +1,45 @@
+"-------------------------------------------------------------------------------
+" 移動設定 Move
+"-------------------------------------------------------------------------------
+
+" 行頭、行末をterminalに合わせる
+nmap <C-a> ^
+nmap <C-e> $
+
+" insert mode でのカーソル移動を有効に
+inoremap OB <Down>
+inoremap OA <Up>
+inoremap OD <Left>
+inoremap OC <Right>
+
+"if !has('gui_running')
+"  set notimeout
+"  set ttimeout
+"  set timeoutlen=100
+"endif
+
+" 対括弧入力時に自動で移動するように
+inoremap {} {}<LEFT>
+inoremap [] []<LEFT>
+inoremap () ()<LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
+inoremap <> <><LEFT>
+
+"フレームサイズを怠惰に変更する
+" 現状うまく動いてないので外してある
+" nnoremap <kPlus>   :<C-u>resize +5<Return>
+" nnoremap <kMinus>  :<C-u>resize -5<Return>
+
+" 前回終了したカーソル行に移動
+autocmd R BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+
+" 対応する括弧に移動
+nnoremap [ %
+nnoremap ] %
+
+" 矩形選択で自由に移動する
+set virtualedit& virtualedit+=block
+
+"ビジュアルモード時vで行末まで選択
+vnoremap v $h
