@@ -11,7 +11,6 @@
   excludesfile = ~/.gitignore      # globalな.gitignoreの指定
   autocrlf     = input             # CRLFを自動変換
   pager        = lv -c             # lvでページャの設定
-	editor = ~/bin/vim
 [alias]
   config-list = config --global --list # コンフィグの設定確認用
   st = status
