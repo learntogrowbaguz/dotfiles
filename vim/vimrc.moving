@@ -19,12 +19,12 @@ inoremap OC <Right>
 "endif
 
 " 対括弧入力時に自動で移動するように
-inoremap {} {}<LEFT>
-inoremap [] []<LEFT>
-inoremap () ()<LEFT>
-inoremap "" ""<LEFT>
-inoremap '' ''<LEFT>
-inoremap <> <><LEFT>
+"inoremap {} {}<LEFT>
+"inoremap [] []<LEFT>
+"inoremap () ()<LEFT>
+"inoremap "" ""<LEFT>
+"inoremap '' ''<LEFT>
+"inoremap <> <><LEFT>
 
 "フレームサイズを怠惰に変更する
 " 現状うまく動いてないので外してある
