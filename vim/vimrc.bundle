@@ -16,6 +16,7 @@ NeoBundle 'git://github.com/Shougo/vimshell.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'tomtom/tcomment_vim'
+NeoBundle 'git://github.com/Lokaltog/vim-easymotion.git'
 
 
 filetype plugin indent on     " Required!
