@@ -10,6 +10,10 @@ set cursorline                                    " カーソル行をハイラ�
 set lazyredraw                                    " コマンド実行中は再描画しない
 set ttyfast                                       " 高速ターミナル接続を行う
 set cursorline                                    " カーソル行をハイライト
+set cursorline                                    " カーソル行をハイライト
+set cursorcolumn                                  " カーソル行をハイライト(縦)
+autocmd InsertEnter * :set cursorcolumn!          " 挿入モード時は邪魔なので消す
+autocmd InsertLeave * :set cursorcolumn           " 
 
 " カレントウィンドウにのみ罫線を引く
 autocmd R WinLeave * set nocursorline
