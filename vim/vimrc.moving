@@ -42,7 +42,7 @@ nnoremap ] %
 set virtualedit& virtualedit+=block
 
 " easyMotionをスペース2回で
-let g:EasyMotion_leader_key = '<C-m>'
+let g:EasyMotion_leader_key = '<Space><Space>'
 
 "ビジュアルモード時vで行末まで選択
 vnoremap v $h
