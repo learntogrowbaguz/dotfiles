@@ -10,4 +10,4 @@ set cindent      " Cプログラムファイルの自動インデントを始め
 " デフォルトの設定
 " shiftwidth->sw softtabstop->sts tabstop->ts expandtab->et
 " softtabstopはTabキー押し下げ時の挿入される空白の量，0の場合はtabstopと同じ，BSにも影響する
-set sw=2 sts=0 ts=2 et
+set sw=4 sts=0 ts=4 et

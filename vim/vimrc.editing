@@ -12,3 +12,11 @@ inoremap <silent> <ESC> <ESC>:set iminsert=0<Return>
 nnoremap <C-x> :%s/\s\+$//ge<Return>
 " tabをスペースに変換する
 nnoremap <C-z> * :%s/\t/  /ge<Return>
+
+command S2T call SpaceToTab()
+function SpaceToTab()
+    %s/^  *$//g
+    set noexpandtab
+    retab!
+    set expandtab
+endfunction

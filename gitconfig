@@ -8,18 +8,20 @@
 [push]
   default = tracking       # defaultのpush先はtrackingしているリポジトリ
 [core]
-  excludesfile = ~/.gitignore      # globalな.gitignoreの指定
-  autocrlf     = input             # CRLFを自動変換
+  excludesfile = /Users/minamihikotake/.gitignore_global
+  # autocrlf     = input             # CRLFを自動変換
   pager        = lv -c             # lvでページャの設定
 [alias]
   config-list = config --global --list # コンフィグの設定確認用
-  st = status
+  st = status -uno
+  sta = status
   sh = show
   so = remote show origin
   ft = fetch
   up = pull --rebase       # pull rebase
   rbm = rebase master      # masterへのrebaseはよく使うのでalias
   ad = add
+  ap = add -p
   ci = commit -a           # modifiedなファイルを全てstageへ
   cam = commit -a --amend  # 直前のcommitを修正
   co = checkout
@@ -30,6 +32,7 @@
   r3 = reset HEAD~3
   r4 = reset HEAD~4
   r5 = reset HEAD~5
+  rh = reset --hard HEAD
   # branch関連
   br = branch
   ba = branch -a           # originも含めた全てのbranchを表示
@@ -68,4 +71,11 @@
   sm = submodule
   sma = submodule add
   smi = submodule update --init
-  smu = submodule foreach "git checkout master; git pull origin master"
+  smu = submodule update
+  smst = submodule foreach "git status"
+  smum = submodule foreach "git checkout master; git pull origin master"
+  # git flow
+  fi = flow init -d
+  ff = flow feature
+  fr = flow release
+  fh = flow hotfix
